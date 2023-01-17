@@ -6,18 +6,18 @@ struct Rectangle {
 
 	// Poorly named variables that do not reflect their scope. 
 	// m_ or 'm' reflects the variables scope to a class.
-    uint width, height; 
+    uint mWidth, mHeight; 
 	
-    void SetWidth(uint _width){
-		width = _width;
+    void SetWidth(uint m_width){
+		mWidth = m_width;
 	}
 	
-	void SetHeight(uint _height){
-		height = _height;
+	void SetHeight(uint m_height){
+		mHeight = m_height;
 	}
     
     auto area() { 	
-    	return width*height;
+    	return mWidth*mHeight;
     }
 }
 
