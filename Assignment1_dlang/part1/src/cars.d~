@@ -6,7 +6,7 @@ import std.algorithm;
 import std.array;
 
 void main(){
-	auto myFile = File("../data/data.json", "r");
+	auto myFile = File("./data/data.json", "r");
 
 	// Reading file as a string
 	// The 'byLine' function will read the file by line,
