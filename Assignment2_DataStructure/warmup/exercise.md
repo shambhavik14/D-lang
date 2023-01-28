@@ -3,6 +3,7 @@
 1. Briefly summarize the project that you have found.
 
 *Write a few sentences here about the project*
+
 The project that I have chosen is Silly. Silly is a modern and light test runner for the D programming language.
 Silly provides various advantages in terms of its new features. It is easy to install and has a smooth integration with 'dub test'.
 All the tests are named and it also has multi-threaded test execution. 
@@ -10,11 +11,13 @@ All the tests are named and it also has multi-threaded test execution.
 2. Look at the last commit message, what was the last change to the project in the github commit history (If for some reason your project does not have a repo, find a different project).
 
 *Write a few sentences here if you were able to figure out what change was made. If you were not, specify the commit message (or lack of a message) and note that there was no descriptive message, but take a best guess at the change made*
+
 The last commit message was to replace test parsing into separate function. I believe this change was for code modularity.
 
 3. How large was the last commit? Was it several files or just a small change?
 
 *Write a few sentences here describing the size of the commit message*
+
 It was just a small change where he shifted the code from one function to another.
 
 4. Why might smaller commit messages be more useful?
