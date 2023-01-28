@@ -83,8 +83,7 @@ class Deque(T) : Container!(T){
 					            
 		auto sizet = size();
 		assert(sizet > cast(size_t) 0, "Deque is empty");
-		return arr[0];
-								      
+		return arr[0];							      
 	}
 	
 	override ref T back() {
@@ -107,7 +106,7 @@ unittest
 	auto myDeque = new Deque!(int);
 	myDeque.push_front(1);
 	auto element = myDeque.pop_front();
-    assert(element == 1);
+    	assert(element == 1);
 }
 
 unittest
@@ -121,7 +120,7 @@ unittest
 unittest
 {
 	auto myDeque = new Deque!(int);
-    myDeque.push_front(1);
+    	myDeque.push_front(1);
 	auto element = myDeque.front();
 	assert(element == 1);
 }
@@ -129,7 +128,7 @@ unittest
 unittest
 {
 	auto myDeque = new Deque!(int);
-    myDeque.push_back(10);
+    	myDeque.push_back(10);
 	auto element = myDeque.back();
 	assert(element == 10);
 }
@@ -137,9 +136,9 @@ unittest
 unittest
 {
 	auto myDeque = new Deque!(int);
-    myDeque.push_back(10);
+    	myDeque.push_back(10);
 	myDeque.push_front(1);
-    auto start = myDeque.front();
+    	auto start = myDeque.front();
 	auto element = myDeque.back();
 	assert(start == 1);
 	assert(element == 10);
@@ -156,7 +155,7 @@ unittest
 unittest
 {
 	auto myDeque = new Deque!(string);
-    myDeque.push_front("hey");
+    	myDeque.push_front("hey");
 	auto element = myDeque.at(0);
 	assert(element == "hey");
 }
@@ -164,7 +163,7 @@ unittest
 unittest
 {
 	auto myDeque = new Deque!(int);
-    myDeque.push_back(10);
+	myDeque.push_back(10);
 	auto element = myDeque.at(0);
 	assert(element == 10);
 }
@@ -172,19 +171,19 @@ unittest
 unittest
 {
 	auto myDeque = new Deque!(int);
-    myDeque.push_back(9);
+	myDeque.push_back(9);
 	myDeque.push_front(3);
-    myDeque.push_front(1);
+	myDeque.push_front(1);
 	auto element = myDeque.at(1);
-    assert(element == 3);
+	assert(element == 3);
 }
 
 unittest 
 {
 	auto myDeque = new Deque!(int);
 	myDeque.push_front(3);
-    auto element = myDeque.size();
-    assert(element == cast(size_t) 1);
+    	auto element = myDeque.size();
+    	assert(element == cast(size_t) 1);
 		  
 }
 
