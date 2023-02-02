@@ -3,10 +3,10 @@
 *TODO*: Please edit the following information in your assignment
 
 * Name: Shambhavi Kulkarni
-* How many hours did it take you to complete this assignment? 
-* Did you collaborate or share ideas with any other students/TAs/Professors? 
+* How many hours did it take you to complete this assignment? part 1 and part 2 took 2 hours. Due to gdb issue in windows and other installation issues warmup took several hours
+* Did you collaborate or share ideas with any other students/TAs/Professors? I attended Juan's office hours
 * Did you use any external resources? 
-  * (tbd if any)
+  * (tbd if any) D documentation
   * (tbd if any)
   * (tbd if any)
 * (Optional) What was the most interesting part of the assignment? How would you improve this assignment?
