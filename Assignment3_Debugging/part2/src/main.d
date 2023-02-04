@@ -3,27 +3,20 @@ import std.algorithm;
 import std.range;
 
 auto IncrementSlice(int[] nums, int n) pure{
-  
-        auto result = nums.map!(a => a+n);
-        return result;      //TODO
+  return nums.map!(a => a+n); //TODO
 }
 
 auto SquareSlice(int[] nums) pure{
-  
-        auto result = nums.map!(a => a*a);
-        return result;      //TODO
+  return nums.map!(a => a*a);      //TODO
 }
 
 auto SquareSum(int[] nums) pure{
-  
-        auto result = nums.map!(a => a*a);
-        auto sum = reduce!((a,b) => a + b)(0, result);
-        return sum;      //TODO
+  return nums.map!(a => a*a).sum();
+  //return reduce!((a,b) => a + b)(0, nums.map!(a => a*a));     //TODO
 }
 
 auto GetEvens(int[] nums) pure{
-        auto result = nums.filter!(a => a % 2 == 0);
-        return result;       //TODO
+  return nums.filter!(a => a % 2 == 0);      //TODO
 }
 
 void main(){
