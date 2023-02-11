@@ -6,31 +6,31 @@
 
 <hr>
 
-**Use Case**: *use-case-title*
+**Use Case**: Selecting new color in a color picker
 
-**Primary Actor**: *primary-actor*
+**Primary Actor**: User
 
-**Goal in Context**: *the aim of the primary-actor in a particular circumstance*
+**Goal in Context**: To select a color from the color picker
 
-**Preconditions**: *conditions that must be true before the scenario may play out*
+**Preconditions**: The user must have selected a brush
 
-**Trigger**: *an action or actions that initiate the scenario*
+**Trigger**: Clicking on the color picker
   
-**Scenario**: *an enumerated list of steps describing the actions and interactions of the primary actor with the system*
- 
-**Exceptions**: *errors or faults that may occur during the scenario. Should include remedy/corrective action taken by the primary actor*
+**Scenario**: A user clicks on the color picker
 
-**Priority**: *relative importance of this use case compared to other use cases*
+**Exceptions**: User has selected an eraser or something other than brush tool. In this case, the user should select a brush first
 
-**When available**: *the targeted release that covers this use case*
+**Priority**: High priority
 
-**Channel to actor**: *the means through which the primary actor and the system communicate*
+**When available**: First release
 
-**Secondary Actor**: *any other actors – people or systems – that may be involved in the scenario*
+**Channel to actor**: The primary actor communicates with the system using I/O devices like keyboard and mouse
 
-**Channels to Secondary Actors**: *the means through which any secondary actors may interact with the system or other actors*
+**Secondary Actor**: N/A
 
-**Open Issues**: *notes, concerns, or other materials*
+**Channels to Secondary Actors**: N/A
+
+**Open Issues**: N/A
 
 <hr>
 
