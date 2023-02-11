@@ -18,11 +18,11 @@
   
 **Scenario 1**: A user will click on a brush to start the painting
 
-**Scenario 2**: A user will change their brush while painting
+**Scenario 2**: A user will change their brush while painting and click on different brush
  
 **Exceptions**: N/A
 
-**Priority**: *relative importance of this use case compared to other use cases*
+**Priority**: High Priority
 
 **When available**: First-release
 
