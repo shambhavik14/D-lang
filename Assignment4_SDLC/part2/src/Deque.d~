@@ -18,13 +18,11 @@ import std.stdio;
 
 interface Container(T){
 
-    /** Element is on the front of collection
-    *	Params: element to push 
+    /** Element is on the front of collection 
     */
     void push_front(T x);
 
-    /** Element is on the back of the collection
-    *	Params: element to push 
+    /** Element is on the back of the collection 
     */
     void push_back(T x);
 
@@ -40,25 +38,21 @@ interface Container(T){
     
     /** Retrieve reference to element at position at index
     * assert pos is between [0 .. $] and size > 0
-    * Returns: reference to element at position at index
     */
     ref T at(size_t pos);
 
     /** Retrieve reference to element at back of position
     * assert size > 0 before operation
-    * Returns: reference to element at back of deque
     */
     ref T back();
 
     /**
     * Retrieve element at front of position
-    * assert size > 0 before operation
-    * Returns: reference to element at front of deque 
+    * assert size > 0 before operation 
     */
     ref T front();
     
-    /** Retrieve number of elements currently in container
-    * Returns: size of deque 
+    /** Retrieve number of elements currently in container 
     */
     size_t size();
 }
