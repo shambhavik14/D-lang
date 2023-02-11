@@ -14,7 +14,7 @@
 
 **Preconditions**: An image must be created
 
-**Trigger**: 1) Selecting the image and filter from menu 2) Dragging filter from menu and dropping on image 
+**Trigger**: 1) Selecting the image and selecting filter from menu 2) Dragging filter from menu and dropping on image 
   
 **Scenario**: 1) A user will select filter from menu after creating an image
               2) A user will select filter from menu for a saved image
