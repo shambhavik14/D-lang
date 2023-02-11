@@ -23,7 +23,7 @@
 
 **Priority**: Average priority
 
-**When available**: Second release
+**When available**: First release
 
 **Channel to actor**: The primary actor communicates through I/O devices like keyboard and mouse. 
 
