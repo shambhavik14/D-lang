@@ -21,7 +21,7 @@
 
 **Exceptions**: Default format for images may not be .bmp so file will be saved in different format. In this case, user will need to click on save as select format
 
-**Priority**: Low-priority
+**Priority**: Average priority
 
 **When available**: Second release
 
