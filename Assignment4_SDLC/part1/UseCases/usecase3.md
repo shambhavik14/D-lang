@@ -6,31 +6,33 @@
 
 <hr>
 
-**Use Case**: *use-case-title*
+**Use Case**: Applying an image filter to previously created image 
 
-**Primary Actor**: *primary-actor*
+**Primary Actor**: User
 
-**Goal in Context**: *the aim of the primary-actor in a particular circumstance*
+**Goal in Context**: To apply filter on created image
 
-**Preconditions**: *conditions that must be true before the scenario may play out*
+**Preconditions**: An image must be created
 
-**Trigger**: *an action or actions that initiate the scenario*
+**Trigger**: 1) Selecting the image and filter from menu 2) Dragging filter from menu and dropping on image 
   
-**Scenario**: *an enumerated list of steps describing the actions and interactions of the primary actor with the system*
- 
-**Exceptions**: *errors or faults that may occur during the scenario. Should include remedy/corrective action taken by the primary actor*
+**Scenario**: 1) A user will select filter from menu after creating an image
+              2) A user will select filter from menu for a saved image
+              3) A user will drag filter and drop on the image
+              
+**Exceptions**: 1) A user might select filter but not the image. In this case a prompt will be displayed on screen to select an image  
 
-**Priority**: *relative importance of this use case compared to other use cases*
+**Priority**: Low priority
 
-**When available**: *the targeted release that covers this use case*
+**When available**: Second release
 
-**Channel to actor**: *the means through which the primary actor and the system communicate*
+**Channel to actor**: The primary actory communicates with system using I/O devices like keyboard and mouse
 
-**Secondary Actor**: *any other actors – people or systems – that may be involved in the scenario*
+**Secondary Actor**: N/A
 
-**Channels to Secondary Actors**: *the means through which any secondary actors may interact with the system or other actors*
+**Channels to Secondary Actors**: N/A
 
-**Open Issues**: *notes, concerns, or other materials*
+**Open Issues**: Filters do not support all image types. Need to add compatibility with various image formats
 
 <hr>
 
