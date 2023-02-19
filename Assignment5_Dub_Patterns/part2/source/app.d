@@ -35,7 +35,7 @@ class Fse : RegularCourse{
 }
 
 /****************************
-* The following is the target interface 
+* Interface HeavyCourse is the target interface 
 */
  
 interface HeavyCourse{
@@ -47,7 +47,7 @@ interface HeavyCourse{
 }
  
 /**
-* Following class Pdp implements the interface HeavyCourse
+* Class Pdp implements the interface HeavyCourse
 *
 */
 class Pdp : HeavyCourse
@@ -59,16 +59,20 @@ class Pdp : HeavyCourse
 }
 
 /**
-* Following class CourseAdapter implements the interface HeavyCourse
+* Class CourseAdapter implements the interface HeavyCourse
 * The client expects to use this interface
 */
  
 class CourseAdapter : HeavyCourse
 {
-    /// Instantiating the interface we want to adapt
+    /**
+    * Instantiating the interface we want to adapt
+    */
     RegularCourse course;
 
-    /// Contructor with a reference to the object we are adapting
+    /**
+    * Contructor with a reference to the object we are adapting
+    */
     this(RegularCourse course)
     {
         this.course = course;
