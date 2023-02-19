@@ -1,0 +1,9 @@
+{
+	"authors": [
+		"shambhavi"
+	],
+	"copyright": "Copyright © 2023, shambhavi",
+	"description": "assignment 5 using dub patterns",
+	"license": "proprietary",
+	"name": "dub_project"
+}

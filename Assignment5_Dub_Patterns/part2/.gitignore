@@ -1,0 +1,16 @@
+.dub
+docs.json
+__dummy.html
+docs/
+/design_pattern_implementation
+design_pattern_implementation.so
+design_pattern_implementation.dylib
+design_pattern_implementation.dll
+design_pattern_implementation.a
+design_pattern_implementation.lib
+design_pattern_implementation-test-*
+*.exe
+*.pdb
+*.o
+*.obj
+*.lst

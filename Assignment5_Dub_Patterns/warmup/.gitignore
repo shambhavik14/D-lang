@@ -1,0 +1,16 @@
+.dub
+docs.json
+__dummy.html
+docs/
+/dub_project
+dub_project.so
+dub_project.dylib
+dub_project.dll
+dub_project.a
+dub_project.lib
+dub_project-test-*
+*.exe
+*.pdb
+*.o
+*.obj
+*.lst
