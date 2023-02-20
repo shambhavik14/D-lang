@@ -1,41 +1,56 @@
 import std.stdio;
 
-struct MyDataStructure(T){
-    // Internal container of our data
-    T[] mCollection;
-
-    // Append by making a copy of data
-    // and appending it to our collection
-    void append(T data){
-        mCollection ~= data;
+struct MyDataStructure(T) {
+  
+  T[] mCollection;
+  
+  void append(T data) {
+    mCollection ~= data;
+    
+  }
+  
+  int current = 0;
+  int next = 0;
+  
+  
+  T front() {
+    return mCollection[current];
+  }
+  
+  void popFront() {
+    debug writeln("popFront next++");
+    next++;
+    current = next;
+  }
+  
+  bool empty() {
+    if(next >= mCollection.length) {
+      debug writeln("empty");
+      return true;
     }
-
-
+    
+    return false;
+  }
 }
 
-void main(){
-    MyDataStructure!int intDataStructure;
-
-    intDataStructure.append(1);
-    intDataStructure.append(2);
-    intDataStructure.append(3);
-    intDataStructure.append(4);
-    intDataStructure.append(5);
-    intDataStructure.append(6);
-
-    // User our iterator
-    foreach(element ;intDataStructure){
-        writeln(element);
-    }
-    // Use our iterator again
-    foreach(element ;intDataStructure){
-        writeln(element);
-    }
-
-    // Let's observe that we are not modifying the underlying
-    // data structure in any way
-    writeln(intDataStructure.mCollection);
+void main() {
+  MyDataStructure!int intDataStructure;
+  
+  intDataStructure.append(1);
+  intDataStructure.append(2);
+  intDataStructure.append(3);
+  intDataStructure.append(4);
+  intDataStructure.append(5);
+  intDataStructure.append(6);
+  
+  foreach(element ; intDataStructure) {
+    writeln(element);
+  }
+  
+  foreach(element ; intDataStructure) {
+    writeln(element);
+  }
+  
+  writeln(intDataStructure.mCollection);
 }
-
-
 
