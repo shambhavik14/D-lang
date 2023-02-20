@@ -74,7 +74,7 @@ unittest {
   intDataStructure.append(1);
   intDataStructure.append(2);
   intDataStructure.append(3);
-  int answer1 = intDataStructure.front()
+  int answer1 = intDataStructure.front();
   assert(answer1 == 1);
   intDataStructure.popFront();
   int answer2 = intDataStructure.front();
