@@ -54,3 +54,31 @@ void main() {
   writeln(intDataStructure.mCollection);
 }
 
+unittest {
+  MyDataStructure!int intDataStructure;
+  intDataStructure.append(1);
+  int answer = intDataStructure.front();
+  assert(answer == 1);
+  
+}
+
+unittest {
+  MyDataStructure!int intDataStructure;
+  intDataStructure.append(1);
+  bool answer = intDataStructure.empty();
+  assert(answer == false);
+}
+
+unittest {
+  MyDataStructure!int intDataStructure;
+  intDataStructure.append(1);
+  intDataStructure.append(2);
+  intDataStructure.append(3);
+  int answer1 = intDataStructure.front()
+  assert(answer1 == 1);
+  intDataStructure.popFront();
+  int answer2 = intDataStructure.front();
+  writeln(answer2 == 2);
+  
+}
+
