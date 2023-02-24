@@ -1,0 +1,13 @@
+{
+	"authors": [
+		"shambhavi"
+	],
+	"copyright": "Copyright © 2023, shambhavi",
+	"description": "testing_unit_threaded",
+	"license": "proprietary",
+	"name": "testing",
+	"dependencies": {
+		"unit-threaded": "~>2.1.2",
+		"bindbc-sdl": "~>1.2.4"
+	}
+}

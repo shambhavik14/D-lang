@@ -1,0 +1,193 @@
+       |// Run your program with: 
+       |// dmd Deque.d -unittest -of=test && ./test
+       |//
+       |// This will execute each of the unit tests telling you if they passed.
+       |
+       |import std.stdio;
+       |import std.algorithm : moveAll;
+       |
+       |interface Container(T){
+       |        // Element is on the front of collection
+       |        void push_front(T x);
+       |        // Element is on the back of the collection
+       |        void push_back(T x);
+       |        // Element is removed from front and returned
+       |        // assert size > 0 before operation
+       |        T pop_front();
+       |        // Element is removed from back and returned
+       |        // assert size > 0 before operation
+       |        T pop_back();
+       |        // Retrieve reference to element at position at index
+       |        // assert pos is between [0 .. $] and size > 0
+       |        ref T at(size_t pos);
+       |        // Retrieve reference to element at back of position
+       |        // assert size > 0 before operation
+       |        ref T back();
+       |        // Retrieve element at front of position
+       |        // assert size > 0 before operation
+       |        ref T front();
+       |        // Retrieve number of elements currently in container
+       |        size_t size();
+       |}
+       |/*
+       |    A Deque is a double-ended queue in which we can push and
+       |    pop elements.
+       |    
+       |    Note: Remember we could implement Deque as either a class or
+       |          a struct depending on how we want to extend or use it.
+       |          Either is fine for this assignment.
+       |*/
+       |
+       |class Deque(T) : Container!(T){
+       |        // Implement here
+       |        T[] arr;
+       |                  
+       |        override void push_front(T x) {
+       |
+      7|                arr = [x] ~ arr;
+       |        }
+       |                      
+       |        override void push_back(T x) {
+      6|                arr ~= x;
+       |        }
+       |                          
+       |        override T pop_front() {
+       |                                
+      1|                auto sizet = size();
+      1|                assert(sizet > cast(size_t) 0, "Deque is empty");
+      1|                T x = arr[0];
+      1|                moveAll(arr[1..$], arr[0..$-1]);
+      1|                --sizet;
+      1|                return x;
+       |                                                            
+       |        }
+       |                              
+       |        override T pop_back() {
+       |        
+      2|                auto sizet = size();
+      2|                assert(sizet > cast(size_t) 0, "Deque is empty");
+      2|                T x = arr[$-1];
+      2|                --sizet;
+      2|                return x;
+       |        }
+       |                                  
+       |        override ref T at(size_t pos) {
+       |                                                
+      3|                auto sizet = size();
+      3|                assert(sizet > cast(size_t) 0, "Deque is empty");
+      6|                assert(pos <= sizet && pos >= cast(size_t) 0, "This index does not exist");
+      3|                return arr[pos];
+       |        }
+       |                                      
+       |        override ref T front() {
+       |                                                    
+      2|                auto sizet = size();
+      2|                assert(sizet > cast(size_t) 0, "Deque is empty");
+      2|                return arr[0];                                                        
+       |        }
+       |        
+       |        override ref T back() {
+       |                                                        
+      2|                auto sizet = size(); 
+      2|                assert(sizet > cast(size_t) 0, "Deque is empty");
+      2|                return arr[$-1];
+       |        }
+       |                                              
+       |        override size_t size() {
+     11|                return arr.length;
+       |        }
+       |}
+       |
+       |// An example unit test that you may consider.
+       |// Try writing more unit tests in separate blocks
+       |// and use different data types.
+       |unittest
+       |{
+      1|        auto myDeque = new Deque!(int);
+      1|        myDeque.push_front(1);
+      1|        auto element = myDeque.pop_front();
+      1|        assert(element == 1);
+       |}
+       |
+       |unittest
+       |{
+      1|        auto myDeque = new Deque!(int);
+      1|        myDeque.push_back(10);
+      1|        auto element = myDeque.pop_back();
+      1|        assert(element == 10);
+       |}
+       |
+       |unittest
+       |{
+      1|        auto myDeque = new Deque!(int);
+      1|        myDeque.push_front(1);
+      1|        auto element = myDeque.front();
+      1|        assert(element == 1);
+       |}
+       |
+       |unittest
+       |{
+      1|        auto myDeque = new Deque!(int);
+      1|        myDeque.push_back(10);
+      1|        auto element = myDeque.back();
+      1|        assert(element == 10);
+       |}
+       |
+       |unittest
+       |{
+      1|        auto myDeque = new Deque!(int);
+      1|        myDeque.push_back(10);
+      1|        myDeque.push_front(1);
+      1|        auto start = myDeque.front();
+      1|        auto element = myDeque.back();
+      1|        assert(start == 1);
+      1|        assert(element == 10);
+       |}
+       |
+       |unittest
+       |{
+      1|        auto myDeque = new Deque!(string);
+      1|        myDeque.push_back("hey");
+      1|        auto element = myDeque.pop_back();
+      1|        assert(element == "hey");
+       |}
+       |
+       |unittest
+       |{
+      1|        auto myDeque = new Deque!(string);
+      1|        myDeque.push_front("hey");
+      1|        auto element = myDeque.at(0);
+      1|        assert(element == "hey");
+       |}
+       |
+       |unittest
+       |{
+      1|        auto myDeque = new Deque!(int);
+      1|        myDeque.push_back(10);
+      1|        auto element = myDeque.at(0);
+      1|        assert(element == 10);
+       |}
+       |
+       |unittest
+       |{
+      1|        auto myDeque = new Deque!(int);
+      1|        myDeque.push_back(9);
+      1|        myDeque.push_front(3);
+      1|        myDeque.push_front(1);
+      1|        auto element = myDeque.at(1);
+      1|        assert(element == 3);
+       |}
+       |
+       |unittest 
+       |{
+      1|        auto myDeque = new Deque!(int);
+      1|        myDeque.push_front(3);
+      1|        auto element = myDeque.size();
+      1|        assert(element == cast(size_t) 1);
+       |                  
+       |}
+       |
+       |void main() {
+       |
+       |}
+Deque.d is 100% covered
