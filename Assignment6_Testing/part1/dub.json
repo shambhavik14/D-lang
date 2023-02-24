@@ -3,22 +3,11 @@
 		"shambhavi"
 	],
 	"copyright": "Copyright © 2023, shambhavi",
-    	"targetType": "executable",
-    	"targetPath": "bin",
-    	"configurations":[
-        {"name":"executable"      },
-        {
-            "name":"unittest",
-            "preBuildCommands": ["dub run unit-threaded -c gen_ut_main -- -f bin/ut.d -d dub"],
-            "mainSourceFile":"bin/ut.d",
-            "excludedSourceFiles": ["source/app.d"],
-            "dependencies": {
-                "bindbc-sdl": "~>1.2.4",
-                "unit-threaded": "~>2.1.2"
-            },
-        }
-    ],
-	"description": "A minimal D application.",
+	"dependencies": {
+		"bindbc-sdl": "~>1.2.4",
+		"unit-threaded": "~>2.1.2"
+	},
+	"description": "testing_unit_threaded",
 	"license": "proprietary",
-	"name": "part1"
+	"name": "shambhavi"
 }
