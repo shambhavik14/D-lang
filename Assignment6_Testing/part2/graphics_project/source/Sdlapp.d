@@ -7,8 +7,11 @@ import surface;
 
 class SDLApp {
 
+	Surface imgSurface;
   this()
  {
+
+	this.imgSurface = new Surface();
     // Load the SDL libraries from bindbc-sdl
 	  // on the appropriate operating system
     version(Windows){
@@ -62,8 +65,7 @@ class SDLApp {
                                         640,
                                         480,
                                         SDL_WINDOW_SHOWN);
-	Surface imgSurface = new Surface();
-	SDL_Surface* sur = imgSurface.iSurface;
+	SDL_Surface* sur = this.imgSurface.iSurface;
 	Pixel pixel = Pixel(255,128,32);
     	bool runApplication = true;
     	bool drawing = false;
@@ -85,7 +87,7 @@ class SDLApp {
     				int brushSize=4;
     				for(int w=-brushSize; w < brushSize; w++){
     					for(int h=-brushSize; h < brushSize; h++){
-    						imgSurface.UpdateSurfacePixel(xPos+w,yPos+h,pixel);
+    						this.imgSurface.UpdateSurfacePixel(xPos+w,yPos+h,pixel);
     					}
     				}
     			}

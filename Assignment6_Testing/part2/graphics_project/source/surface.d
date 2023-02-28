@@ -40,8 +40,22 @@ class Surface {
   	pixelArray[yPos*this.iSurface.pitch + xPos*this.iSurface.format.BytesPerPixel+1] = p.g;
   	// Change the 'red' component of the pixels
   	pixelArray[yPos*this.iSurface.pitch + xPos*this.iSurface.format.BytesPerPixel+2] = p.r;
-}
+	}
   
+  Pixel pixelAt(int xPos, int yPos) {
+        Pixel p = Pixel();
+
+        // Retrieve the pixel array that we want to read
+        ubyte* pixelArray = cast(ubyte*)this.iSurface.pixels;
+        // Read the 'blue' component of the pixel at the specified position
+        p.b = pixelArray[yPos*iSurface.pitch + xPos*this.iSurface.format.BytesPerPixel+0];
+        // Read the 'green' component of the pixel at the specified position
+        p.g = pixelArray[yPos*iSurface.pitch + xPos*this.iSurface.format.BytesPerPixel+1];
+        // Read the 'red' component of the pixel at the specified position
+        p.r = pixelArray[yPos*iSurface.pitch + xPos*this.iSurface.format.BytesPerPixel+2];
+        
+        return p;
+    }
   
 }
 
